@@ -1,5 +1,16 @@
 node_modules/
 .env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+.browser-data/
+mailboxes.csv
+upload-progress.json
+cloudflare-blocked.png
+error-*.png
 input/
 output/
 01_prepare/input/

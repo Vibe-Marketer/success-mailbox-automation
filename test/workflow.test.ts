@@ -78,6 +78,7 @@ describe("fixed API destination and inventory", () => {
       const url = new URL(String(input)); calls.push(url.href);
       expect(url.origin).toBe("https://api.success.ai");
       expect(new Headers(init?.headers).get("authorization")).toBe("Bearer test-token");
+      expect(init?.redirect).toBe("error");
       const offset = Number(url.searchParams.get("offset"));
       return new Response(JSON.stringify({ docs: rows.slice(offset, offset + 50), total: 51, limit: "50", offset: String(offset) }), { status: 200 });
     }) as unknown as typeof fetch;

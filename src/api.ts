@@ -21,6 +21,7 @@ export class SuccessBrowserApi {
     try {
       response = await this.fetcher(`${API_BASE_URL}/${path}`, {
         ...init,
+        redirect: "error",
         signal: AbortSignal.timeout(this.timeoutMs),
         headers: { "content-type": "application/json", authorization: `Bearer ${this.sessionToken}`, ...init.headers },
       });
