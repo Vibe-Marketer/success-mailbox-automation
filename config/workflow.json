@@ -1,0 +1,17 @@
+{
+  "provider": "row",
+  "input": {
+    "csv": "01_prepare/input/mailboxes.csv",
+    "normalizedBatch": "01_prepare/output/private/normalized-batch.json",
+    "preflightReport": "01_prepare/output/preflight-report.json",
+    "approval": "02_approve/output/approval.json",
+    "progress": "03_connect/output/progress.json",
+    "connectReport": "03_connect/output/connect-report.json",
+    "verification": "04_verify/output/verification.json"
+  },
+  "batching": { "size": 25, "delayMs": 1500 },
+  "timeoutMs": 30000,
+  "approval": { "maxTtlMs": 3600000, "clockSkewMs": 300000 },
+  "resume": true,
+  "errorHandling": { "continueOnError": true, "maxRetries": 0 }
+}

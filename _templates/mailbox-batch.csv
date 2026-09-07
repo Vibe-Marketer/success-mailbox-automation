@@ -1,0 +1,4 @@
+provider,email,first_name,last_name,oauth_code,reply_to,imap_username,imap_password,imap_host,imap_port,smtp_username,smtp_password,smtp_host,smtp_port
+gmail,gmail-user@example.invalid,Example,User,PASTE_FRESH_CODE_HERE,,,,,,,,,
+microsoft,microsoft-user@example.invalid,Example,User,PASTE_FRESH_CODE_HERE,,,,,,,,,
+smtp,smtp-user@example.invalid,Example,User,,,smtp-user@example.invalid,LOCAL_SECRET_ONLY,imap.example.invalid,993,smtp-user@example.invalid,LOCAL_SECRET_ONLY,smtp.example.invalid,587

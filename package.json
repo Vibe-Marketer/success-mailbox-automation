@@ -1,0 +1,20 @@
+{
+  "name": "success-mailbox-automation",
+  "version": "0.1.0",
+  "description": "Approval-gated Gmail, Microsoft, and SMTP mailbox connection workflow for Success.ai",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "cli": "bun src/cli.ts",
+    "stage:prepare": "bun src/cli.ts prepare",
+    "stage:connect": "bun src/cli.ts connect",
+    "stage:verify": "bun src/cli.ts verify",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test",
+    "audit:contracts": "bun scripts/audit-contracts.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.7.3"
+  }
+}
